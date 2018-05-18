@@ -25,6 +25,10 @@ All done? Groovy, now lets setup the project, clone the repository somewhere (th
 
 This will spawn a PHP server and you can access it on: http://127.0.0.1:8000
 
+## Creating users
+
+- In comment prompt run: `php bin/console app:create-user` and follow the questions.
+
 
 ## Running on a live server
 
