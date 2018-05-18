@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>{% block title %}Login{% endblock %}</title>
+
+        {# CDN Resources #}
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <style>
+            .form-signin {
+                width: 100%;
+                max-width: 330px;
+                padding: 15px;
+                margin: 50px auto;
+            }
+        </style>
+    </head>
+    <body class="text-center">
+
+
+        <form class="form-signin" method="post">
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+            {% if error %}
+                <div class="alert alert-danger" role="alert">{{ error }}</div>
+            {% endif %}
+
+            <input type="text" id="name" name="name" class="form-control" placeholder="Name" required="" autofocus="">
+            <input type="password" id="code" name="code" class="form-control" placeholder="4 Digit Pin Code" required="">
+
+            <br><hr><br>
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+
+
+    </body>
+</html>
